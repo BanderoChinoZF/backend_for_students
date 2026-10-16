@@ -1,0 +1,34 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Juan Pérez Actualizado",
+      "username": "juanp",
+      "password": "nuevapass123"
+    },
+    {
+      "id": 2,
+      "nombre": "María García",
+      "username": "mariag",
+      "password": "maria456"
+    },
+    {
+      "id": 3,
+      "nombre": "Carlos López",
+      "username": "carlosl",
+      "password": "carlos789"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana Martínez",
+      "username": "anam",
+      "password": "ana321"
+    },
+    {
+      "id": 6,
+      "nombre": "Pedro Sanchez",
+      "username": "pedros",
+      "password": "pedro999"
+    }
+  ]
+}
