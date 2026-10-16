@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS usuarios (
+    id SERIAL PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    contrasena VARCHAR(100) NOT NULL,
+    username VARCHAR(50) UNIQUE NOT NULL
+);
+
