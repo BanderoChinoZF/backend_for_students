@@ -4,6 +4,7 @@ const cors = require("cors");
 const helmet = require("helmet");
 
 const healthRoutes = require("./routes/health.routes");
+const usersRoutes = require("./routes/users.routes");
 
 const app = express();
 
@@ -20,6 +21,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/health", healthRoutes);
+app.use("/api/v1/usuarios", usersRoutes);
 
 app.use((req, res) => {
   res.status(404).json({
