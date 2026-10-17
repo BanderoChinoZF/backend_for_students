@@ -24,3 +24,4 @@ function shutdown(signal) {
 
 process.on("SIGTERM", () => shutdown("SIGTERM"));
 process.on("SIGINT", () => shutdown("SIGINT"));
+console.log("Servidor corriendo en http://localhost:3000/api/v1/users");
