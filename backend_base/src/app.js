@@ -21,6 +21,9 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/health", healthRoutes);
 
+const userRoutes = require("./routes/users.routes");
+app.use("/api/v1/users", userRoutes);
+
 app.use((req, res) => {
   res.status(404).json({
     error: "NOT_FOUND",
