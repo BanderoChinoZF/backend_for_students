@@ -1,0 +1,21 @@
+{
+  "name": "22161048-diazzuriel-usuarios-microservice",
+  "version": "1.0.0",
+  "description": "Microservicio CRUD de usuarios - Practica 1",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js"
+  },
+  "author": "Uriel Diaz Z - 22161048",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.8",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
