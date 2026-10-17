@@ -1,0 +1,53 @@
+{
+  "coleccion": "CRUD Usuarios",
+  "base_url": "http://localhost:3000/api/v1/usuarios",
+  "peticiones": [
+    {
+      "nombre": "Crear Usuario post",
+      "metodo": "POST",
+      "url": "http://localhost:3000/api/v1/usuarios",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "nombre": "Juan Perez",
+        "username": "juanp",
+        "contraseña": "clave123"
+      }
+    },
+    {
+      "nombre": "obtener Todos los Usuarios get",
+      "metodo": "GET",
+      "url": "http://localhost:3000/api/v1/usuarios",
+      "headers": {},
+      "body": null
+    },
+    {
+      "nombre": "obtener Usuario por id get",
+      "metodo": "GET",
+      "url": "http://localhost:3000/api/v1/usuarios/1",
+      "headers": {},
+      "body": null
+    },
+    {
+      "nombre": "actualizar Usuario put",
+      "metodo": "PUT",
+      "url": "http://localhost:3000/api/v1/usuarios/1",
+      "headers": {
+        "Content-Type": "application/json"
+      },
+      "body": {
+        "nombre": "Juan Perez Actualizado",
+        "username": "juanp_edit",
+        "contrasena": "nuevaClave456"
+      }
+    },
+    {
+      "nombre": "eliminar Usuario delete",
+      "metodo": "DELETE",
+      "url": "http://localhost:3000/api/v1/usuarios/1",
+      "headers": {},
+      "body": null
+    }
+  ]
+}
