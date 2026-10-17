@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "Username": "wicho",
+      "Password": "wicho12345",
+      "Nameuser": "Luis Enrique Pinto Zárate"
+    },
+    {
+      "id": 2,
+      "Username": "admin",
+      "Password": "admin2026",
+      "Nameuser": "Administrador"
+    },
+    {
+      "id": 4,
+      "Username": "stefany",
+      "Password": "fany123",
+      "Nameuser": "Stefany flores"
+    }
+  ]
+}
