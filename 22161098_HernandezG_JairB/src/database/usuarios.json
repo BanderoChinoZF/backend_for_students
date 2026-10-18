@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "Ana Gonzales",
+    "email": "anita99@gmail.com",
+    "edad": 28,
+    "username": "anita99",
+    "password": "123456789"
+  },
+  {
+    "id": 3,
+    "nombre": "Ana Gonzales",
+    "email": "anita99@gmail.com",
+    "edad": 28,
+    "username": "anita99",
+    "password": "123456789"
+  },
+  {
+    "id": 5,
+    "nombre": "Diana Janet Perez",
+    "email": "janet_06@gmail.com",
+    "edad": 28,
+    "username": "Diana_Net",
+    "password": "3r4t5y56u6"
+  }
+]
