@@ -16,5 +16,11 @@
     "name": "Guillermo Diaz",
     "username": "batman",
     "password": "mysecret789"
+  },
+  {
+    "id": 4,
+    "name": "Juan Pérez",
+    "username": "jperez",
+    "password": "miPassword123"
   }
 ]
