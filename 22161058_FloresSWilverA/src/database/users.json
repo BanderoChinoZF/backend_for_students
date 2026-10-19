@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Wilver A. Flores",
+    "username": "wilver_updated",
+    "password": "newpassword123"
+  },
+  {
+    "id": 2,
+    "name": "Alfredo Santiago",
+    "username": "fredo",
+    "password": "securepass456"
+  },
+  {
+    "id": 3,
+    "name": "Guillermo Diaz",
+    "username": "batman",
+    "password": "mysecret789"
+  }
+]
