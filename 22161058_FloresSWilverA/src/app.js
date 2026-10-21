@@ -10,6 +10,7 @@ const swaggerUi = require("swagger-ui-express");
 const env = require("./config/env");
 const healthRoutes = require("./routes/health.routes");
 const userRoutes = require("./routes/user.routes");
+const userDbRoutes = require("./routes/user.db.routes")
 
 const app = express();
 
@@ -25,7 +26,7 @@ const swaggerOptions = {
     info: {
       title: "API Documentación - Backend for Students",
       version: "1.0.0",
-      description: "Documentación de mi API en Express",
+      description: "Documentación de API RESTful en Express con persistencia en JSON y PostgreSQL (Supabase)",
     },
     servers: [
       {
@@ -48,7 +49,8 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 // Rutas de la API
 app.use("/api/v1/health", healthRoutes);
-app.use("/api/v1/users", userRoutes);
+app.use("/api/v1/users", userRoutes);        // CRUD con archivo users.json
+app.use("/api/v1/db/users", userDbRoutes);   // CRUD con Supabase (PostgreSQL)
 
 // Manejo de errores 404
 app.use((req, res) => {
