@@ -1,43 +1,57 @@
-const { Client } = require("pg");
+const { Pool } = require("pg");
 const env = require("../config/env");
 
-const client = new Client({
+const pool = new Pool({
   connectionString: env.URL_DB,
   ssl: env.dbSsl ? { rejectUnauthorized: true } : false,
 });
 
-let connectionPromise;
+let closePromise;
+let connectionStarted = false;
 
-async function conectar() {
+function validarUrlDb() {
   if (!env.URL_DB) {
     throw new Error("Falta configurar URL_DB en el archivo .env");
   }
+}
 
-  if (!connectionPromise) {
-    connectionPromise = client.connect().catch((error) => {
-      connectionPromise = undefined;
-      throw error;
-    });
-  }
+function query(...args) {
+  validarUrlDb();
+  connectionStarted = true;
+  return pool.query(...args);
+}
 
-  await connectionPromise;
+function connect(...args) {
+  validarUrlDb();
+  connectionStarted = true;
+  return pool.connect(...args);
+}
+
+async function conectar() {
+  await query("SELECT 1");
 }
 
 async function probarConexion() {
-  await conectar();
-  const resultado = await client.query("SELECT NOW() AS fecha");
+  const resultado = await query("SELECT NOW() AS fecha");
   console.log("Conexión a PostgreSQL exitosa:", resultado.rows[0].fecha);
 }
 
 async function cerrarConexion() {
-  if (connectionPromise) {
-    await client.end();
-    connectionPromise = undefined;
+  if (connectionStarted && !closePromise) {
+    closePromise = pool.end();
   }
+  await closePromise;
 }
 
+pool.on("error", (error) => {
+  console.error("Error inesperado en el pool de PostgreSQL:", error);
+});
+
 module.exports = {
-  client,
+  pool,
+  client: pool,
+  query,
+  connect,
   conectar,
   probarConexion,
   cerrarConexion,
