@@ -1,19 +1,10 @@
 [
   {
-    "id_usuario": 1,
-    "nombre_usuario": "Manuel de Jesús Actualizado",
-    "username": "manuel1540_prueba",
-    "password": "contraseña12345",
-    "nombre": "Manuel de Jesús Actualizado"
-  },
-  {
-    "nombre": "Manuel Lopez",
-    "id_usuario": 2
-  },
-  {
-    "nombre_usuario": "Nuevo Estudiante",
-    "username": "nuevo_usuario",
-    "password": "12345",
-    "id_usuario": 3
+    "id": 1,
+    "nombre": "Ana Gonzales",
+    "email": "anita99@gmail.com",
+    "edad": 28,
+    "username": "anita99",
+    "password": "123456789"
   }
 ]
