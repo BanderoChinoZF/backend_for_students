@@ -1,0 +1,32 @@
+[
+  {
+    "ID": 1,
+    "nombre": "Juan Pérez",
+    "username": "juanp",
+    "contrasenia": "password123"
+  },
+  {
+    "ID": 2,
+    "nombre": "Ana Gómez",
+    "username": "anag",
+    "contrasenia": "securepass456"
+  },
+  {
+    "ID": 3,
+    "nombre": "Carlos López",
+    "username": "carlosl",
+    "contrasenia": "mypassword789"
+  },
+  {
+    "ID": 4,
+    "nombre": "María Rodríguez",
+    "username": "mariar",
+    "contrasenia": "maria_pass_321"
+  },
+  {
+    "ID": 5,
+    "nombre": "Luis Fernández",
+    "username": "luisf",
+    "contrasenia": "luis_secure!99"
+  }
+]
