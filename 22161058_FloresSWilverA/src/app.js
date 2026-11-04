@@ -8,9 +8,17 @@ const swaggerJsdoc = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 
 const env = require("./config/env");
-const healthRoutes = require("./routes/health.routes");
-const userRoutes = require("./routes/user.routes");
-const userDbRoutes = require("./routes/user.db.routes")
+
+// Archivos de rutas para los endpoints de la API
+const healthRoutes = require("./routes/health.routes"); // Estado del servidor
+const userJsonRoutes = require("./routes/user.routes"); //Rutas del JSON
+const userDbRoutes = require("./routes/user.db.routes") //Rutas de Supabase
+
+// Nuevas rutas de PostgreSQL Local:
+const userRoutes = require("./routes/usuarios.routes");
+const userV2Routes = require("./routes/usuarios.v2.routes");
+const rolesRoutes = require("./routes/roles.routes");
+const employeeRoutes = require("./routes/employee.routes");
 
 const app = express();
 
@@ -26,7 +34,7 @@ const swaggerOptions = {
     info: {
       title: "API Documentación - Backend for Students",
       version: "1.0.0",
-      description: "Documentación de API RESTful en Express con persistencia en JSON y PostgreSQL (Supabase)",
+      description: "Documentación de API RESTful en Express (JSON, Supabase y PostgreSQL Local con Roles y Empleados)",
     },
     servers: [
       {
@@ -47,10 +55,16 @@ const swaggerDocs = swaggerJsdoc(swaggerOptions);
 // Montar la interfaz de Swagger en /api-docs
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-// Rutas de la API
-app.use("/api/v1/health", healthRoutes);
-app.use("/api/v1/users", userRoutes);        // CRUD con archivo users.json
+// Rutas y endpoints de la API
+app.use("/api/v1/health", healthRoutes); //verificacion de que el servidor funciona
+app.use("/api/v1/users", userJsonRoutes);        // CRUD con archivo users.json
 app.use("/api/v1/db/users", userDbRoutes);   // CRUD con Supabase (PostgreSQL)
+
+//Nuevos endponts con PostgreSQL Local
+app.use("/api/v1/usuarios", userRoutes);
+app.use("/api/v2/usuarios", userV2Routes);
+app.use("/api/v2/roles", rolesRoutes);
+app.use("/api/v2/employees", employeeRoutes);
 
 // Manejo de errores 404
 app.use((req, res) => {
