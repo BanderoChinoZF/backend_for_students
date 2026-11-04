@@ -75,7 +75,7 @@ const router = express.Router();
  *     summary: Obtener todos los usuarios
  *     description: Devuelve la lista completa de usuarios registrados.
  *     tags:
- *       - Users
+ *       - Users (JSON)
  *     responses:
  *       200:
  *         description: Lista de usuarios obtenida exitosamente.
@@ -95,7 +95,7 @@ router.get("/", userController.getUsers);
  *     summary: Obtener un usuario por ID
  *     description: Busca y devuelve un usuario según su identificador.
  *     tags:
- *       - Users
+ *       - Users (JSON)
  *     parameters:
  *       - name: id
  *         in: path
@@ -127,7 +127,7 @@ router.get("/:id", userController.getUserById);
  *     summary: Crear un usuario
  *     description: Registra un usuario nuevo con name, username y password.
  *     tags:
- *       - Users
+ *       - Users (JSON)
  *     requestBody:
  *       required: true
  *       content:
@@ -157,7 +157,7 @@ router.post("/", userController.createUser);
  *     summary: Actualizar un usuario
  *     description: Actualiza la información del usuario indicado.
  *     tags:
- *       - Users
+ *       - Users (JSON)
  *     parameters:
  *       - name: id
  *         in: path
@@ -195,7 +195,7 @@ router.put("/:id", userController.updateUser);
  *     summary: Eliminar un usuario
  *     description: Elimina el usuario indicado.
  *     tags:
- *       - Users
+ *       - Users (JSON)
  *     parameters:
  *       - name: id
  *         in: path

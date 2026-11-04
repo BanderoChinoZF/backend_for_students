@@ -59,7 +59,7 @@ const router = express.Router();
  *   get:
  *     summary: Obtener usuarios desde Supabase (PostgreSQL)
  *     tags:
- *       - Users (Database)
+ *       - Users (Supabase)
  *     responses:
  *       200:
  *         description: Lista de usuarios de la base de datos
@@ -72,7 +72,7 @@ router.get("/", userDbController.getUsers);
  *   get:
  *     summary: Obtener usuario por ID desde Supabase
  *     tags:
- *       - Users (Database)
+ *       - Users (Supabase)
  *     parameters:
  *       - name: id
  *         in: path
@@ -93,7 +93,7 @@ router.get("/:id", userDbController.getUserById);
  *   post:
  *     summary: Crear usuario en Supabase (PostgreSQL)
  *     tags:
- *       - Users (Database)
+ *       - Users (Supabase)
  *     requestBody:
  *       required: true
  *       content:
@@ -112,7 +112,7 @@ router.post("/", userDbController.createUser);
  *   put:
  *     summary: Actualizar usuario en Supabase
  *     tags:
- *       - Users (Database)
+ *       - Users (Supabase)
  *     parameters:
  *       - name: id
  *         in: path
@@ -137,7 +137,7 @@ router.put("/:id", userDbController.updateUser);
  *   delete:
  *     summary: Eliminar usuario de Supabase
  *     tags:
- *       - Users (Database)
+ *       - Users (Supabase)
  *     parameters:
  *       - name: id
  *         in: path
