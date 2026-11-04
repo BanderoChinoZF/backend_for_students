@@ -1,0 +1,181 @@
+{
+  "info": {
+    "name": "CRUD_usuarios",
+    "description": null,
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Raiz",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/",
+          "protocol": "http",
+          "host": [
+            "localhost:3000/"
+          ],
+          "path": [],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "HealthCheck",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/health",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "health"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Consultar Usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/users",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Consultar Usuario ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/users/2",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "2"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    },
+    {
+      "name": "Crear Usuario",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/users",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Juan Pérez\",\n  \"username\": \"jperez\",\n  \"password\": \"miPassword123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Actualizar Usuario",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/users/1",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "1"
+          ],
+          "query": [],
+          "variable": []
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Wilver A. Flores\",\n  \"username\": \"wilver_updated\",\n  \"password\": \"newpassword123\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Eliminar Usuario",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "description": "",
+        "url": {
+          "raw": "http://localhost:3000/api/v1/users/4",
+          "protocol": "http",
+          "host": [
+            "localhost:3000"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "4"
+          ],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": []
+}
