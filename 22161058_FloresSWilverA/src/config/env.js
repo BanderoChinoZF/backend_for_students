@@ -1,5 +1,7 @@
 // src/config/env.js
 
+const { URL_DB } = require("../../../backend_base/src/config/env");
+
 //Importamos la librería dotenv para poder leer las variables de entorno desde un archivo .env
 require("dotenv").config();
 
@@ -7,7 +9,9 @@ const env = {
   nodeEnv: process.env.NODE_ENV || "development",
   port: Number(process.env.PORT) || 3000,
   serviceName: process.env.SERVICE_NAME || "First Microservice - Backend for Students",
-  databaseUrl: process.env.DATABASE_URL,
+  databaseUrl: process.env.DATABASE_URL, //conexion a supabase
+  URL_DB: process.env.URL_DB, //conexion a postgresql local
+  dbSsl: process.env.DB_SSL !== "false",
 };
 
 //Funcion que exportamos para poder usar las variables de entorno en otros archivos
